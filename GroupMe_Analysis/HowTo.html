@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>GroupMe Analyzer</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+		body {
+			padding: 0px 100px;
+			background-color: lightgrey;
+		}
+        h2 {
+            font-size: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        p {
+            font-size: 25px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        caption {
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+    <body>
+        <nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="https://groupmeanalysis.com/">GroupMe Analytics</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="index.html">Analyze</a>
+						</li>
+						<li>
+							<a href="#">How To</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+        </nav>
+        <div class="jumbotron" style="background-size: cover; background-position: center; background: url(&quot;https://images.unsplash.com/photo-1495916793609-98f17d076d04?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1659&amp;q=80&quot;);">
+			<div class="container">
+				<h1 style="color:#cfcf3b;text-shadow: 2px 2px gray;" class="jumbotronic">GroupMe Analyzer</h1>
+				<h6 style="font-size: 200%; text-shadow: 2px 2px gray; color:#cfcf3b">All of Your Messaging Statistics</h6>
+			</div>
+        </div>
+        <h2>
+            How To Utilize the Analysis Tool
+        </h2>
+
+        <p><br></p>
+        
+        <p>
+            1. Follow the link at the bottom of the page to obtain the JSON packaged data to insert into the Analyzer<br>
+            2. There are no initial GroupMe's to analyze in the tool, so you need to perform an Add GroupMe operation (explained below) <br>
+            3. For each of the options, certain fields may or may not be required, so follow the table to know what information is needed for an operation<br>
+        </p>
+
+        <p><br></p>
+
+        <table class="table table-striped table-hover table-bordered">
+            <caption>Options Table Summary</caption>
+            <thead>
+                <tr>
+                    <th>Option</th>
+                    <th>GroupMe ID</th>
+                    <th>GroupMe JSON</th>
+                    <th>Format of Message Body</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="info">
+                    <td>Add GroupMe</td>
+                    <td>Required</td>
+                    <td>Required</td>
+                    <td>
+                        ID: Group_ID<br>
+                        JSON Body: {“ID”:(groupmemessage.json)}
+                    </td>
+                </tr>
+                <tr class="info">
+                    <td>Modify GroupMe</td>
+                    <td>Required</td>
+                    <td>Required</td>
+                    <td>
+                        ID: Group_ID <br>
+                        JSON Body: {“ID”:(groupmemessage.json)}
+                    </td>
+                </tr>
+                <tr class="success">
+                    <td>Delete GroupMe</td>
+                    <td>Required</td>
+                    <td>Not Required</td>
+                    <td>
+                        ID: Group_ID
+                    </td>
+                </tr>
+                <tr class="success">
+                    <td>Check Stats</td>
+                    <td>Required</td>
+                    <td>Not Required</td>
+                    <td>
+                        ID: Group_ID
+                    </td>
+                </tr>
+                <tr class="success">
+                    <td>Find User</td>
+                    <td>Required</td>
+                    <td>Not Required</td>
+                    <td>
+                        ID: Group_ID~User
+                    </td>
+                </tr>
+                <tr class="success">
+                    <td>Search Phrase</td>
+                    <td>Required</td>
+                    <td>Not Required</td>
+                    <td>
+                        ID: Group_ID~Phrase
+                    </td>
+                </tr>
+                <tr class="success">
+                    <td>Count Phrase</td>
+                    <td>Required</td>
+                    <td>Not Required</td>
+                    <td>
+                        ID: Group_ID~Phrase
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <footer class="footer">
+			<p><br></p>
+			<div class="media">
+				<div class="media-left">
+					<a href="https://groupmeanalysis.com/" target="_blank">
+						<img src="groupme_orig.png">
+					</a>
+				</div>
+				<div class="media-body">
+					<h5 class="media-heading">
+						<a href="https://groupmeanalysis.com/" target="_blank">GroupMe Analysis</a>
+					</h5>
+					<h4>Learn how GroupMe stores your data and makes it available for any member in your group!</h4>
+				</div>
+			</div>
+		</footer>
+    </body>
+</html>
